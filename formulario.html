@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8"><!--META DADOS, LINGUAGEM UNICODE-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--utilização do navegador movel-->
+    <link rel="stylesheet" type="text/css" href="formulario.css" media=""> <!--Linkar html com css-->
+    <title>Cadastro</title>
+</head>
+<body>
+    <!--Colocar id em tudo de importante para CSS reconhecer-->
+    <div class="campo"> <!--divisão de paragrafos-->
+        <h1 id="titulo">Cadastro Online Teste</h1> <!-- Tag com grande prioridade na letra-->
+        <p id="subtitulo">Complete seus dados pessoais</p> <!--Tag de paragrafo-->
+        <br> <!--Pular de linha-->
+    </div>
+                <!--Alem do id podemos colocar classe, que poderão estar presente em varias delas o id só pode estar presente em apenas 1-->
+    <form>
+        <fieldset class="grupo"><!--Separa em campos-->
+            
+            <div class="campo"> <!--Entrada de nome e sobrenome-->
+                
+                <label for="Nome"><strong>Nome:</strong></label><!--Explicação do campo-->
+                <input type="text" name="Nome" id="Nome" required> <!--entrada de valor--> <!-- Required, quer dizer a pessoa não consegue avançar se o campo não estiver preenchido-->
+
+            </div>
+
+            <div class="campo">
+                
+                <label for="Sobrenome"><strong>Sobrenome:</strong></label> <!--Strong Para deixar em negrito-->
+                <input type="text" name="Sobrenome" id="Sobrenome" required>
+            
+            </div>
+    </fieldset> 
+        
+            <div class="campo"> <!--entrada de email-->
+                
+                <label for="Email"><strong>Email:</strong></label>
+                <input type="email" name="Email" id="Email" required> <!--Já existe um tipo de email pré definido em html para verificar se o email e valido-->
+            
+            </div>
+
+            <div class="campo"> <!--Reagel Botton. Botoes de multipla escolha-->
+                
+                <label><strong>Qual lado voce se destaca em sua carreira</strong></label> <!--Escolha em opções-->
+                <label>
+                    <input type="radio" name="DevWeb" value="FrontEnd">Front-End<!-- Radio Tag pré definida para reagel bottons-->
+                                                                       <!--<>x lado de fora é oque aparece na tela-->
+                </label>
+                
+                <label>
+                    <input type="radio" name="DevWeb" value="BackEnd">Back-End
+                </label> 
+
+                <label>
+                    <input type="radio" name="DevWeb" value="FullStack">FullStack
+                </label>
+           
+            </div>
+
+            <div class="campo">
+               
+                <label for="senioridade"><strong>Senioridade</strong></label>
+                    <select id="senioridade"> <!--Escolha em seleção-->
+                        <option selected disabled value="">Selecione</option> <!--Para que não fique nenhuma opção marcada-->
+                        <option>Junior</option>
+                        <option>Pleno</option>
+                        <option>Senior</option>
+                    </select>
+            </div>
+
+    <fieldset class="grupo">
+                
+                <div id="check">
+                    <label><strong>Selecione as tecnologias que utiliza:</strong></label> <br><br> 
+                    
+                    <input type="checkbox" name="tecnologia1" id="tecnologia1" value="HTML">
+                    <label for="tecnologia1">HTML</label> <!--LABEL VOLTADO PARA TECNOLOGIA 1-->
+                    
+                    <input type="checkbox" name="tecnologia2" id="tecnologia2" value="C++">
+                    <label for="tecnologia2">C++</label>
+
+                    <input type="checkbox" name="tecnologia3" id="tecnologia3" value="JavaScript">
+                    <label for="tecnologia3">JavaScript</label>
+
+                    <input type="checkbox" name="tecnologia4" id="tecnologia4" value="CSS">
+                    <label for="tecnologia4">CSS</label>
+
+                    <input type="checkbox" name="tecnologia5" id="tecnologia5" value="Python">
+                    <label for="tecnologia5">Python</label>
+                </div>
+             </fieldset>
+                
+                <div class="campo">
+                    <label><strong>Conte um Pouco de sua experiencia</strong></label> <!--Campo de area de texto-->
+                    <textarea row="6" style="width: 26em;" id="experiencia" name="experiencia"></textarea> <!--Tag Para devinição de texto-->
+                </div>
+
+                <button class="botão" type="submit">Concluido</button> <!--Tipo de botão que envia o formulario-->
+
+
+    </form>
+
+</body>
+</html>
